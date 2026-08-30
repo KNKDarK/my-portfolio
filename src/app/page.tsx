@@ -89,7 +89,7 @@ export default function Home() {
             View Projects
           </a>
           <a
-            href="/resume.pdf"
+            href="/knk_resume.pdf"
             download
             className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-slate-700 px-6 text-sm font-semibold text-slate-200 transition-colors hover:border-emerald-500/50 hover:text-emerald-400"
           >
@@ -199,7 +199,7 @@ export default function Home() {
           </div>
 
           <a
-            href="/resume.pdf"
+            href="/knk_resume.pdf"
             download
             className="inline-flex h-11 items-center gap-2 rounded-lg bg-emerald-500 px-5 text-sm font-semibold text-slate-950 transition-colors hover:bg-emerald-400"
           >
