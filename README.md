@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio | Sk. Shafi Masthan Koushik
+
+A modern, minimal, dark-themed personal portfolio built with **Next.js**, **Tailwind CSS**, and **TypeScript**. It features a slate/gray background with emerald/green accents and uses no external UI libraries.
+
+## Features
+
+- **Hero** — typing animation cycling through roles, quick contact pills, and a stats bar
+- **About** — circular avatar, quick-fact cards, and technical skills badges
+- **Projects** — responsive cards with gradient placeholders, tech tags, and hover effects
+- **Contact** — email, GitHub, and LinkedIn links with social icons
+- **Sticky Navbar** — transparent at top, gains backdrop blur on scroll, mobile hamburger menu
+- **Scroll-triggered fade-in animations** — custom IntersectionObserver (`Reveal`) component
+- **Back to Top** button that appears after scrolling 300px
+- **Download Resume** button linked to a PDF
+- Fully **responsive** for all screen sizes
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org) (App Router)
+- [Tailwind CSS](https://tailwindcss.com) v4
+- [TypeScript](https://www.typescriptlang.org)
+- Fonts: Inter (body), Space Grotesk (headings) via `next/font`
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Build for production:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── globals.css      # global styles + custom Tailwind utilities
+│   ├── layout.tsx       # root layout + fonts
+│   └── page.tsx         # single-page portfolio (Hero, About, Projects, Contact, Footer)
+└── components/
+    ├── BackToTop.tsx    # floating back-to-top button
+    ├── Navbar.tsx       # sticky navbar with mobile menu
+    ├── Reveal.tsx       # scroll-triggered fade-in wrapper
+    └── Typewriter.tsx   # typing/erasing text animation
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Projects**: edit the `projects` array at the top of `src/app/page.tsx`
+- **Photo**: replace the avatar placeholder in the About section and add your image to `public/`
+- **Resume**: replace `public/knk_resume.pdf` with your latest resume
+- **Contact details**: update email/phone/social links throughout `src/app/page.tsx`
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The easiest way to deploy is the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
